@@ -13,6 +13,7 @@ namespace WSTI_Project
 {
     public partial class Login_Form : Form
     {
+        public int endCounter = 3;
         public Login_Form()
         {
             InitializeComponent();
@@ -44,12 +45,17 @@ namespace WSTI_Project
 
                 this.DialogResult = DialogResult.OK;
 
-            } else
-            {
-                MessageBox.Show("Niepoprawne hasło i login","Błąd logowania",MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
+            else if(endCounter == 0)
+                {
+                    this.DialogResult = DialogResult.No;
+                    Application.Exit();
+                }
+                else
+                {
+                     endCounter--;
+                     MessageBox.Show("Niepoprawne hasło i login\n Zostało prób:"+endCounter,"Błąd logowania",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
         }
 
         private void loginCancelBtn_Click(object sender, EventArgs e)

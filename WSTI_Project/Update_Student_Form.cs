@@ -147,7 +147,7 @@ namespace WSTI_Project
                 byte[] picture = (byte[])dataTable.Rows[0]["picture"];
                 MemoryStream pic = new MemoryStream(picture);
                 pictureBoxStudent.Image = Image.FromStream(pic);
-            }catch(Exception e)
+            }catch
             {
                 MessageBox.Show("Podaj poprawny numer ID", "Niepoprawny numer ID", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }

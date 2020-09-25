@@ -96,5 +96,21 @@ namespace WSTI_Project
             }
 
         }
+
+        //query do ilosci wszystkich studentow
+        public string sqlCount(string sql)
+        {
+            MySqlCommand command = new MySqlCommand(sql, db.getConnection);
+            db.openConnection();
+            string count = command.ExecuteScalar().ToString();
+            db.closeConnection();
+
+            return count;
+        }
+
+        public string allStudents()
+        {
+            return sqlCount("SELECT COUNT(*) FROM `student`");
+        }
     }
 }

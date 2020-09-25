@@ -52,5 +52,23 @@ namespace WSTI_Project
             Save_Data_Form save_Data_Form = new Save_Data_Form();
             save_Data_Form.Show(this);
         }
+
+        private void dodajKierunekToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Manage_Courses_Form manage_Course_Form = new Manage_Courses_Form();
+            manage_Course_Form.Show(this);
+        }
+
+        private void zapiszDaneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveCoursesForm saveCoursesForm = new SaveCoursesForm();
+            saveCoursesForm.Show(this);
+        }
+
+        private void dodajKursToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Course_From add_Course_From = new Add_Course_From();
+            add_Course_From.Show(this);
+        }
     }
 }

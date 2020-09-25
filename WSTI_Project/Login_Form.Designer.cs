@@ -132,6 +132,7 @@
             this.Controls.Add(this.userLabel);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Login_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login_Form";
             this.Load += new System.EventHandler(this.Login_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

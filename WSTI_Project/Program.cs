@@ -11,12 +11,29 @@ namespace WSTI_Project
         /// <summary>
         /// Główny punkt wejścia dla aplikacji.
         /// </summary>
+        /// 
+
+        
+
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login_Form());
+            //Application.Run(new Login_Form());
+
+            Login_Form login = new Login_Form();
+
+            {
+                if (login.ShowDialog() == DialogResult.OK)
+                {
+                    Application.Run(new Main_Form());
+                }
+                else if (login.ShowDialog() == DialogResult.No)
+                {       
+                    Application.Exit();
+                }
+            }
         }
     }
 }

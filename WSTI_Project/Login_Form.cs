@@ -13,7 +13,7 @@ namespace WSTI_Project
 {
     public partial class Login_Form : Form
     {
-        public int endCounter = 3;
+        public int endCounter = 4;
         public Login_Form()
         {
             InitializeComponent();
@@ -46,7 +46,7 @@ namespace WSTI_Project
                 this.DialogResult = DialogResult.OK;
 
             }
-            else if(endCounter == 0)
+            else if(endCounter == 1)
                 {
                     this.DialogResult = DialogResult.No;
                     Application.Exit();

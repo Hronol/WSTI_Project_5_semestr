@@ -115,6 +115,24 @@
     <Compile Include="Main_Form.Designer.cs">
       <DependentUpon>Main_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manager_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager_Form.Designer.cs">
+      <DependentUpon>Manager_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Save_Data_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Save_Data_Form.Designer.cs">
+      <DependentUpon>Save_Data_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statistics_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistics_form.Designer.cs">
+      <DependentUpon>Statistics_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudentClass.cs" />
     <Compile Include="StudentsListForm.cs">
       <SubType>Form</SubType>
@@ -146,6 +164,9 @@
     <EmbeddedResource Include="Main_Form.resx">
       <DependentUpon>Main_Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Manager_Form.resx">
+      <DependentUpon>Manager_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -155,6 +176,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Save_Data_Form.resx">
+      <DependentUpon>Save_Data_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistics_form.resx">
+      <DependentUpon>Statistics_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentsListForm.resx">
       <DependentUpon>StudentsListForm.cs</DependentUpon>
     </EmbeddedResource>

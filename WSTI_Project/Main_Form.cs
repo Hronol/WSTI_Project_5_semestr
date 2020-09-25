@@ -31,7 +31,8 @@ namespace WSTI_Project
 
         private void statystykiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Statistics_form statistics_Form = new Statistics_form();
+            statistics_Form.Show(this);
         }
 
         private void edytujUsuńToolStripMenuItem_Click(object sender, EventArgs e)
@@ -42,12 +43,14 @@ namespace WSTI_Project
 
         private void ustawieniaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Manager_Form manager_Form = new Manager_Form();
+            manager_Form.Show(this);
         }
 
         private void zapiszToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Save_Data_Form save_Data_Form = new Save_Data_Form();
+            save_Data_Form.Show(this);
         }
     }
 }

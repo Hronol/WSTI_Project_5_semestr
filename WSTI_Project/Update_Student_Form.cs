@@ -41,39 +41,45 @@ namespace WSTI_Project
 
         private void buttonEditStudent_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(textBoxID.Text);
-            string name = textBoxName.Text;
-            string lastName = textBoxLastName.Text;
-            DateTime birthday = dateTimePickerNewStudent.Value;
-            string gender = "Mężczyzna";
-            string phone = textBoxPhone.Text;
-            string address = textBoxAdres.Text;
-
-            if (radioButtonFemale.Checked)
+            try
             {
-                gender = "Kobieta";
-            }
+                int id = Convert.ToInt32(textBoxID.Text);
+                string name = textBoxName.Text;
+                string lastName = textBoxLastName.Text;
+                DateTime birthday = dateTimePickerNewStudent.Value;
+                string gender = "Mężczyzna";
+                string phone = textBoxPhone.Text;
+                string address = textBoxAdres.Text;
 
-            MemoryStream picture = new MemoryStream();
-
-            if (veryfication() == true)
-            {
-                pictureBoxStudent.Image.Save(picture, pictureBoxStudent.Image.RawFormat);
-
-                if (studentClass.updateStudent(id, name, lastName, birthday, phone, gender, address, picture))
+                if (radioButtonFemale.Checked)
                 {
-                    MessageBox.Show("Aktualizowane dane studenta", "Gratulacje!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    gender = "Kobieta";
+                }
+
+                MemoryStream picture = new MemoryStream();
+
+                if (veryfication() == true)
+                {
+                    pictureBoxStudent.Image.Save(picture, pictureBoxStudent.Image.RawFormat);
+
+                    if (studentClass.updateStudent(id, name, lastName, birthday, phone, gender, address, picture))
+                    {
+                        MessageBox.Show("Zaktualizowano dane studenta", "Aktualizacja danych", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Wystąpił błąd podczas aktualizacji danych\nBłąd połączenia z bazą danych", "Aktualizacja danych", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Wystąpił błąd podczas aktualizacji danych\nBłąd połączenia z bazą danych", "Błąd edytowania studenta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Nie wszystkie dane zostały wypełnione", "Aktualizacja danych", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else
+            catch
             {
-                MessageBox.Show("Nie wszystkie dane zostały wypełnione", "Błąd edytowania danych", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Wystąpił błąd. Zweryfikuj dane i spróbuj ponownie");
             }
-
         }
         public bool veryfication()
         {
@@ -92,26 +98,33 @@ namespace WSTI_Project
         }
             private void buttonDeleteStudent_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(textBoxID.Text);
-
-            if(MessageBox.Show("Czy na pewno chcesz usunąć studenta?", "Usuń studenta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)==DialogResult.Yes)
+            try
             {
-                if(studentClass.deleteStudent(id))
+                int id = Convert.ToInt32(textBoxID.Text);
+
+                if (MessageBox.Show("Czy na pewno chcesz usunąć studenta?", "Usuń studenta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    MessageBox.Show("Student został usunięty z bazy danych", "Usuń studenta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //czyszczenie pol
-                    textBoxID.Text = "";
-                    textBoxName.Text = "";
-                    textBoxLastName.Text = "";
-                    textBoxAdres.Text = "";
-                    textBoxPhone.Text = "";
-                    dateTimePickerNewStudent.Value = DateTime.Now;
-                    pictureBoxStudent.Image = null;
+                    if (studentClass.deleteStudent(id))
+                    {
+                        MessageBox.Show("Student został usunięty z bazy danych", "Usuń studenta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //czyszczenie pol
+                        textBoxID.Text = "";
+                        textBoxName.Text = "";
+                        textBoxLastName.Text = "";
+                        textBoxAdres.Text = "";
+                        textBoxPhone.Text = "";
+                        dateTimePickerNewStudent.Value = DateTime.Now;
+                        pictureBoxStudent.Image = null;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Operacja usuwania została przerwana", "Usuń studenta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Operacja usuwania została przerwana", "Usuń studenta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+            }
+            catch
+            {
+                MessageBox.Show("Wystąpił błąd. Zweryfikuj dane i spróbuj ponownie");
             }
         }
 

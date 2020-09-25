@@ -44,7 +44,7 @@ namespace WSTI_Project
             updateStudentForm.textBoxLastName.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
             updateStudentForm.textBoxPhone.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
             updateStudentForm.textBoxAdres.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
-            updateStudentForm.dateTimePickerNewStudent.Value = (DateTime)dataGridView1.CurrentRow.Cells[0].Value;
+            updateStudentForm.dateTimePickerNewStudent.Value = (DateTime)dataGridView1.CurrentRow.Cells[3].Value;
 
             if(dataGridView1.CurrentRow.Cells[4].Value.ToString() == "Kobieta")
             {
@@ -53,7 +53,7 @@ namespace WSTI_Project
 
             byte[] picture;
             picture = (byte[])dataGridView1.CurrentRow.Cells[7].Value;
-            MemoryStream pic = new MemoryStream();
+            MemoryStream pic = new MemoryStream(picture);
             updateStudentForm.pictureBoxStudent.Image = Image.FromStream(pic);
             updateStudentForm.Show();
         }

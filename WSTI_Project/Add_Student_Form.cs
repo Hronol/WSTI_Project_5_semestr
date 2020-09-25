@@ -32,36 +32,44 @@ namespace WSTI_Project
 
         private void buttonSaveStudent_Click(object sender, EventArgs e)
         {
-            StudentClass studentClass = new StudentClass();
-            string name = textBoxName.Text;
-            string lastName = textBoxLastName.Text;
-            DateTime birthday = dateTimePickerNewStudent.Value;
-            string gender = "Mężczyzna";
-            string phone = textBoxPhone.Text;
-            string address = textBoxAdres.Text;
-
-            if(radioBtnFemale.Checked)
+            try
             {
-                gender = "Kobieta";
-            }
+                StudentClass studentClass = new StudentClass();
+                string name = textBoxName.Text;
+                string lastName = textBoxLastName.Text;
+                DateTime birthday = dateTimePickerNewStudent.Value;
+                string gender = "Mężczyzna";
+                string phone = textBoxPhone.Text;
+                string address = textBoxAdres.Text;
 
-            MemoryStream picture = new MemoryStream();
-            
-            if(veryfication()==true)
-            {
-                pictureBoxStudent.Image.Save(picture, pictureBoxStudent.Image.RawFormat);
-
-                if(studentClass.addStudent(name,lastName,birthday,phone,gender,address,picture))
+                if (radioBtnFemale.Checked)
                 {
-                    MessageBox.Show("Dodano studenta!", "Gratulacje!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    gender = "Kobieta";
+                }
+
+                MemoryStream picture = new MemoryStream();
+
+                if (veryfication() == true)
+                {
+                    pictureBoxStudent.Image.Save(picture, pictureBoxStudent.Image.RawFormat);
+
+                    if (studentClass.addStudent(name, lastName, birthday, gender, phone, address, picture))
+                    {
+                        MessageBox.Show("Dodano studenta!", "Gratulacje!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Wystąpił błąd podczas dodawania studenta\nBłąd połączenia z bazą danych", "Błąd dodawania studenta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Wystąpił błąd podczas dodawania studenta\nBłąd połączenia z bazą danych", "Błąd dodawania studenta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Nie wszystkie dane zostały wypełnione", "Błąd dodawania danych", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            } else
+            }
+            catch
             {
-                MessageBox.Show("Nie wszystkie dane zostały wypełnione", "Błąd dodawania danych", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Wystąpił błąd. Zweryfikuj dane i spróbuj ponownie");
             }
 
         }

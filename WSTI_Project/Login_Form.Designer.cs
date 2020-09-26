@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_Form));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.userLabel = new System.Windows.Forms.Label();
             this.passwordLabel = new System.Windows.Forms.Label();
@@ -41,9 +42,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(44, 12);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(29, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(128, 118);
+            this.pictureBox1.Size = new System.Drawing.Size(143, 118);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -86,24 +88,26 @@
             // 
             // loginAcceptBtn
             // 
+            this.loginAcceptBtn.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.loginAcceptBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.loginAcceptBtn.Location = new System.Drawing.Point(342, 294);
             this.loginAcceptBtn.Name = "loginAcceptBtn";
             this.loginAcceptBtn.Size = new System.Drawing.Size(136, 55);
             this.loginAcceptBtn.TabIndex = 6;
             this.loginAcceptBtn.Text = "Zaloguj";
-            this.loginAcceptBtn.UseVisualStyleBackColor = true;
+            this.loginAcceptBtn.UseVisualStyleBackColor = false;
             this.loginAcceptBtn.Click += new System.EventHandler(this.loginAcceptBtn_Click);
             // 
             // loginCancelBtn
             // 
+            this.loginCancelBtn.BackColor = System.Drawing.Color.OrangeRed;
             this.loginCancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.loginCancelBtn.Location = new System.Drawing.Point(135, 294);
             this.loginCancelBtn.Name = "loginCancelBtn";
             this.loginCancelBtn.Size = new System.Drawing.Size(132, 55);
             this.loginCancelBtn.TabIndex = 7;
-            this.loginCancelBtn.Text = "Anuluj";
-            this.loginCancelBtn.UseVisualStyleBackColor = true;
+            this.loginCancelBtn.Text = "Wyjdź";
+            this.loginCancelBtn.UseVisualStyleBackColor = false;
             this.loginCancelBtn.Click += new System.EventHandler(this.loginCancelBtn_Click);
             // 
             // label1

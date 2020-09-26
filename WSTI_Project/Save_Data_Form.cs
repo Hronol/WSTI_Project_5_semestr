@@ -114,5 +114,10 @@ namespace WSTI_Project
                 MessageBox.Show("Dane zostały zapisane na pulpicie.");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

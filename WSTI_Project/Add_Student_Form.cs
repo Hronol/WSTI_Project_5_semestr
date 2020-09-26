@@ -76,7 +76,7 @@ namespace WSTI_Project
 
         private void buttonCancelStudent_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
 
         public bool veryfication()
@@ -93,6 +93,11 @@ namespace WSTI_Project
             {
                 return true;
             }
+        }
+
+        private void buttonCancelStudent_MouseClick(object sender, MouseEventArgs e)
+        {
+            
         }
     }
 }

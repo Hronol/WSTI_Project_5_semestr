@@ -173,5 +173,10 @@ namespace WSTI_Project
                 e.Handled = true;
             }
         }
+
+        private void buttonCloseFormAddStudents_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

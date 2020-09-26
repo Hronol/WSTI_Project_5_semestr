@@ -60,7 +60,7 @@ namespace WSTI_Project
 
         private void loginCancelBtn_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
         }
     }
 }

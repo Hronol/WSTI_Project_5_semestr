@@ -60,5 +60,9 @@ namespace WSTI_Project
 
         }
 
+        private void buttonCloseFormAddStudents_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

@@ -30,15 +30,16 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButtonYes = new System.Windows.Forms.RadioButton();
-            this.radioButtonNo = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePickerFrom = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerTo = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
             this.buttonFind = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dateTimePickerTo = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerFrom = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.radioButtonNo = new System.Windows.Forms.RadioButton();
+            this.radioButtonYes = new System.Windows.Forms.RadioButton();
             this.buttonSaveToFile = new System.Windows.Forms.Button();
+            this.buttonCloseFormAddStudents = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -67,18 +68,66 @@
             this.groupBox1.Size = new System.Drawing.Size(960, 98);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
             // 
-            // radioButtonYes
+            // buttonFind
             // 
-            this.radioButtonYes.AutoSize = true;
-            this.radioButtonYes.Location = new System.Drawing.Point(194, 19);
-            this.radioButtonYes.Name = "radioButtonYes";
-            this.radioButtonYes.Size = new System.Drawing.Size(44, 17);
-            this.radioButtonYes.TabIndex = 0;
-            this.radioButtonYes.Text = "Tak";
-            this.radioButtonYes.UseVisualStyleBackColor = true;
-            this.radioButtonYes.CheckedChanged += new System.EventHandler(this.radioButtonYes_CheckedChanged);
+            this.buttonFind.Location = new System.Drawing.Point(729, 27);
+            this.buttonFind.Name = "buttonFind";
+            this.buttonFind.Size = new System.Drawing.Size(212, 51);
+            this.buttonFind.TabIndex = 7;
+            this.buttonFind.Text = "Wczytaj dane";
+            this.buttonFind.UseVisualStyleBackColor = true;
+            this.buttonFind.Click += new System.EventHandler(this.buttonFind_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Location = new System.Drawing.Point(234, 55);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(34, 25);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "do";
+            // 
+            // dateTimePickerTo
+            // 
+            this.dateTimePickerTo.CustomFormat = "dd.MM.yyyy";
+            this.dateTimePickerTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerTo.Location = new System.Drawing.Point(274, 58);
+            this.dateTimePickerTo.Name = "dateTimePickerTo";
+            this.dateTimePickerTo.Size = new System.Drawing.Size(88, 20);
+            this.dateTimePickerTo.TabIndex = 5;
+            this.dateTimePickerTo.Value = new System.DateTime(2020, 9, 25, 11, 46, 6, 0);
+            // 
+            // dateTimePickerFrom
+            // 
+            this.dateTimePickerFrom.CustomFormat = "dd.MM.yyyy";
+            this.dateTimePickerFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerFrom.Location = new System.Drawing.Point(140, 58);
+            this.dateTimePickerFrom.Name = "dateTimePickerFrom";
+            this.dateTimePickerFrom.Size = new System.Drawing.Size(88, 20);
+            this.dateTimePickerFrom.TabIndex = 4;
+            this.dateTimePickerFrom.Value = new System.DateTime(2020, 9, 25, 11, 46, 40, 0);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.Location = new System.Drawing.Point(6, 55);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(128, 25);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Data urodzin:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(6, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(156, 25);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Użyj zakresu dat";
             // 
             // radioButtonNo
             // 
@@ -93,65 +142,16 @@
             this.radioButtonNo.UseVisualStyleBackColor = true;
             this.radioButtonNo.CheckedChanged += new System.EventHandler(this.radioButtonNo_CheckedChanged);
             // 
-            // label1
+            // radioButtonYes
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(6, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 25);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Użyj zakresu dat";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(6, 55);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 25);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Data urodzin:";
-            // 
-            // dateTimePickerFrom
-            // 
-            this.dateTimePickerFrom.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePickerFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerFrom.Location = new System.Drawing.Point(140, 58);
-            this.dateTimePickerFrom.Name = "dateTimePickerFrom";
-            this.dateTimePickerFrom.Size = new System.Drawing.Size(88, 20);
-            this.dateTimePickerFrom.TabIndex = 4;
-            this.dateTimePickerFrom.Value = new System.DateTime(2020, 9, 25, 11, 46, 40, 0);
-            // 
-            // dateTimePickerTo
-            // 
-            this.dateTimePickerTo.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePickerTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerTo.Location = new System.Drawing.Point(274, 58);
-            this.dateTimePickerTo.Name = "dateTimePickerTo";
-            this.dateTimePickerTo.Size = new System.Drawing.Size(88, 20);
-            this.dateTimePickerTo.TabIndex = 5;
-            this.dateTimePickerTo.Value = new System.DateTime(2020, 9, 25, 11, 46, 6, 0);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(234, 55);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 25);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "do";
-            // 
-            // buttonFind
-            // 
-            this.buttonFind.Location = new System.Drawing.Point(729, 27);
-            this.buttonFind.Name = "buttonFind";
-            this.buttonFind.Size = new System.Drawing.Size(212, 51);
-            this.buttonFind.TabIndex = 7;
-            this.buttonFind.Text = "Wczytaj dane";
-            this.buttonFind.UseVisualStyleBackColor = true;
-            this.buttonFind.Click += new System.EventHandler(this.buttonFind_Click);
+            this.radioButtonYes.AutoSize = true;
+            this.radioButtonYes.Location = new System.Drawing.Point(194, 19);
+            this.radioButtonYes.Name = "radioButtonYes";
+            this.radioButtonYes.Size = new System.Drawing.Size(44, 17);
+            this.radioButtonYes.TabIndex = 0;
+            this.radioButtonYes.Text = "Tak";
+            this.radioButtonYes.UseVisualStyleBackColor = true;
+            this.radioButtonYes.CheckedChanged += new System.EventHandler(this.radioButtonYes_CheckedChanged);
             // 
             // buttonSaveToFile
             // 
@@ -164,12 +164,25 @@
             this.buttonSaveToFile.UseVisualStyleBackColor = true;
             this.buttonSaveToFile.Click += new System.EventHandler(this.buttonSaveToFile_Click);
             // 
+            // buttonCloseFormAddStudents
+            // 
+            this.buttonCloseFormAddStudents.BackColor = System.Drawing.Color.DarkSalmon;
+            this.buttonCloseFormAddStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonCloseFormAddStudents.Location = new System.Drawing.Point(12, 696);
+            this.buttonCloseFormAddStudents.Name = "buttonCloseFormAddStudents";
+            this.buttonCloseFormAddStudents.Size = new System.Drawing.Size(126, 53);
+            this.buttonCloseFormAddStudents.TabIndex = 4;
+            this.buttonCloseFormAddStudents.Text = "Wróć";
+            this.buttonCloseFormAddStudents.UseVisualStyleBackColor = false;
+            this.buttonCloseFormAddStudents.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Save_Data_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(984, 761);
+            this.Controls.Add(this.buttonCloseFormAddStudents);
             this.Controls.Add(this.buttonSaveToFile);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
@@ -197,5 +210,6 @@
         private System.Windows.Forms.RadioButton radioButtonNo;
         private System.Windows.Forms.RadioButton radioButtonYes;
         private System.Windows.Forms.Button buttonSaveToFile;
+        private System.Windows.Forms.Button buttonCloseFormAddStudents;
     }
 }

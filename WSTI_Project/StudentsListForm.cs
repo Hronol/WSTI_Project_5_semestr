@@ -69,5 +69,10 @@ namespace WSTI_Project
             gridViewImageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
             dataGridView1.AllowUserToAddRows = false;
         }
+
+        private void buttonCloseFormAddStudents_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

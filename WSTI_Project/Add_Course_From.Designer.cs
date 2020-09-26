@@ -35,23 +35,24 @@
             this.label6 = new System.Windows.Forms.Label();
             this.buttonAddCourse = new System.Windows.Forms.Button();
             this.numericUpDownhoursNumber = new System.Windows.Forms.NumericUpDown();
+            this.buttonCloseFormAddStudents = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownhoursNumber)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxCourseLabel
             // 
             this.textBoxCourseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxCourseLabel.Location = new System.Drawing.Point(212, 65);
+            this.textBoxCourseLabel.Location = new System.Drawing.Point(223, 26);
             this.textBoxCourseLabel.Name = "textBoxCourseLabel";
-            this.textBoxCourseLabel.Size = new System.Drawing.Size(292, 38);
+            this.textBoxCourseLabel.Size = new System.Drawing.Size(446, 38);
             this.textBoxCourseLabel.TabIndex = 28;
             this.textBoxCourseLabel.TextChanged += new System.EventHandler(this.textBoxName_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(37, 121);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.Location = new System.Drawing.Point(51, 95);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(166, 31);
             this.label2.TabIndex = 26;
@@ -61,8 +62,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(26, 65);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(37, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(180, 31);
             this.label1.TabIndex = 25;
@@ -72,18 +73,18 @@
             // textBoxDescription
             // 
             this.textBoxDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxDescription.Location = new System.Drawing.Point(212, 186);
+            this.textBoxDescription.Location = new System.Drawing.Point(223, 165);
             this.textBoxDescription.Multiline = true;
             this.textBoxDescription.Name = "textBoxDescription";
-            this.textBoxDescription.Size = new System.Drawing.Size(292, 262);
+            this.textBoxDescription.Size = new System.Drawing.Size(446, 262);
             this.textBoxDescription.TabIndex = 30;
             this.textBoxDescription.TextChanged += new System.EventHandler(this.textBoxAdres_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.Location = new System.Drawing.Point(125, 186);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.Location = new System.Drawing.Point(139, 168);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(78, 31);
             this.label6.TabIndex = 27;
@@ -92,7 +93,7 @@
             // 
             // buttonAddCourse
             // 
-            this.buttonAddCourse.Location = new System.Drawing.Point(212, 492);
+            this.buttonAddCourse.Location = new System.Drawing.Point(297, 463);
             this.buttonAddCourse.Name = "buttonAddCourse";
             this.buttonAddCourse.Size = new System.Drawing.Size(292, 89);
             this.buttonAddCourse.TabIndex = 31;
@@ -103,17 +104,30 @@
             // numericUpDownhoursNumber
             // 
             this.numericUpDownhoursNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.numericUpDownhoursNumber.Location = new System.Drawing.Point(212, 121);
+            this.numericUpDownhoursNumber.Location = new System.Drawing.Point(223, 95);
             this.numericUpDownhoursNumber.Name = "numericUpDownhoursNumber";
-            this.numericUpDownhoursNumber.Size = new System.Drawing.Size(292, 38);
+            this.numericUpDownhoursNumber.Size = new System.Drawing.Size(446, 38);
             this.numericUpDownhoursNumber.TabIndex = 33;
+            // 
+            // buttonCloseFormAddStudents
+            // 
+            this.buttonCloseFormAddStudents.BackColor = System.Drawing.Color.DarkSalmon;
+            this.buttonCloseFormAddStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonCloseFormAddStudents.Location = new System.Drawing.Point(12, 532);
+            this.buttonCloseFormAddStudents.Name = "buttonCloseFormAddStudents";
+            this.buttonCloseFormAddStudents.Size = new System.Drawing.Size(126, 53);
+            this.buttonCloseFormAddStudents.TabIndex = 34;
+            this.buttonCloseFormAddStudents.Text = "Wróć";
+            this.buttonCloseFormAddStudents.UseVisualStyleBackColor = false;
+            this.buttonCloseFormAddStudents.Click += new System.EventHandler(this.buttonCloseFormAddStudents_Click);
             // 
             // Add_Course_From
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(750, 623);
+            this.ClientSize = new System.Drawing.Size(821, 597);
+            this.Controls.Add(this.buttonCloseFormAddStudents);
             this.Controls.Add(this.numericUpDownhoursNumber);
             this.Controls.Add(this.buttonAddCourse);
             this.Controls.Add(this.textBoxCourseLabel);
@@ -139,5 +153,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button buttonAddCourse;
         private System.Windows.Forms.NumericUpDown numericUpDownhoursNumber;
+        private System.Windows.Forms.Button buttonCloseFormAddStudents;
     }
 }

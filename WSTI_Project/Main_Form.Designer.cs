@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sTUDENCIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajStudentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,10 +38,9 @@
             this.ustawieniaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zapiszToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kURSYToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.wYNIKIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dodajKursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajKierunekToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zapiszDaneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dodajKursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,8 +49,7 @@
             this.menuStrip1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sTUDENCIToolStripMenuItem,
-            this.kURSYToolStripMenuItem,
-            this.wYNIKIToolStripMenuItem});
+            this.kURSYToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(984, 24);
@@ -122,38 +121,34 @@
             this.kURSYToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.kURSYToolStripMenuItem.Text = "KURSY";
             // 
-            // wYNIKIToolStripMenuItem
+            // dodajKursToolStripMenuItem
             // 
-            this.wYNIKIToolStripMenuItem.Name = "wYNIKIToolStripMenuItem";
-            this.wYNIKIToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.wYNIKIToolStripMenuItem.Text = "WYNIKI";
+            this.dodajKursToolStripMenuItem.Name = "dodajKursToolStripMenuItem";
+            this.dodajKursToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.dodajKursToolStripMenuItem.Text = "Dodaj kurs";
+            this.dodajKursToolStripMenuItem.Click += new System.EventHandler(this.dodajKursToolStripMenuItem_Click);
             // 
             // dodajKierunekToolStripMenuItem
             // 
             this.dodajKierunekToolStripMenuItem.Name = "dodajKierunekToolStripMenuItem";
-            this.dodajKierunekToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dodajKierunekToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.dodajKierunekToolStripMenuItem.Text = "Zarządzaj";
             this.dodajKierunekToolStripMenuItem.Click += new System.EventHandler(this.dodajKierunekToolStripMenuItem_Click);
             // 
             // zapiszDaneToolStripMenuItem
             // 
             this.zapiszDaneToolStripMenuItem.Name = "zapiszDaneToolStripMenuItem";
-            this.zapiszDaneToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.zapiszDaneToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.zapiszDaneToolStripMenuItem.Text = "Zapisz dane";
             this.zapiszDaneToolStripMenuItem.Click += new System.EventHandler(this.zapiszDaneToolStripMenuItem_Click);
-            // 
-            // dodajKursToolStripMenuItem
-            // 
-            this.dodajKursToolStripMenuItem.Name = "dodajKursToolStripMenuItem";
-            this.dodajKursToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.dodajKursToolStripMenuItem.Text = "Dodaj kurs";
-            this.dodajKursToolStripMenuItem.Click += new System.EventHandler(this.dodajKursToolStripMenuItem_Click);
             // 
             // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(984, 761);
             this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -162,6 +157,7 @@
             this.Name = "Main_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main_Form";
+            this.Load += new System.EventHandler(this.Main_Form_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -178,7 +174,6 @@
         private System.Windows.Forms.ToolStripMenuItem statystykiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem edytujUsuńToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kURSYToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem wYNIKIToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem zapiszToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ustawieniaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dodajKierunekToolStripMenuItem;

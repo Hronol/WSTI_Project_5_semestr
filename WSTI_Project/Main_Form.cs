@@ -70,5 +70,10 @@ namespace WSTI_Project
             Add_Course_From add_Course_From = new Add_Course_From();
             add_Course_From.Show(this);
         }
+
+        private void Main_Form_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

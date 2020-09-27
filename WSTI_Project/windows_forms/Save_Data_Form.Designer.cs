@@ -188,7 +188,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "Save_Data_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Save_Data_Form";
+            this.Text = "School_manager";
             this.Load += new System.EventHandler(this.Save_Data_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSTI_Project", "WSTI_Project\WSTI_Project.csproj", "{A2244846-3ED3-4CF8-90E5-95A6EE090AEB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School_manager", "WSTI_Project\School_manager.csproj", "{A2244846-3ED3-4CF8-90E5-95A6EE090AEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

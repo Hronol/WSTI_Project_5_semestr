@@ -80,7 +80,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "SaveCoursesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SaveCoursesForm";
+            this.Text = "School_manager";
             this.Load += new System.EventHandler(this.SaveCoursesForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

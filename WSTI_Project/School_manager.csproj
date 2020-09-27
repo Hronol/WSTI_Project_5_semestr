@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{A2244846-3ED3-4CF8-90E5-95A6EE090AEB}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WSTI_Project</RootNamespace>
-    <AssemblyName>WSTI_Project</AssemblyName>
+    <RootNamespace>School_manager</RootNamespace>
+    <AssemblyName>School_manager</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -103,93 +103,93 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Add_Student_Form.cs">
+    <Compile Include="windows_forms\Add_Student_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Add_Student_Form.Designer.cs">
+    <Compile Include="windows_forms\Add_Student_Form.Designer.cs">
       <DependentUpon>Add_Student_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="CourseClass.cs" />
-    <Compile Include="Main_Form.cs">
+    <Compile Include="classes\CourseClass.cs" />
+    <Compile Include="windows_forms\Main_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main_Form.Designer.cs">
+    <Compile Include="windows_forms\Main_Form.Designer.cs">
       <DependentUpon>Main_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manager_Form.cs">
+    <Compile Include="windows_forms\Manager_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Manager_Form.Designer.cs">
+    <Compile Include="windows_forms\Manager_Form.Designer.cs">
       <DependentUpon>Manager_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Add_Course_From.cs">
+    <Compile Include="windows_forms\Add_Course_From.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Add_Course_From.Designer.cs">
+    <Compile Include="windows_forms\Add_Course_From.Designer.cs">
       <DependentUpon>Add_Course_From.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manage_Courses_Form.cs">
+    <Compile Include="windows_forms\Manage_Courses_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Manage_Courses_Form.Designer.cs">
+    <Compile Include="windows_forms\Manage_Courses_Form.Designer.cs">
       <DependentUpon>Manage_Courses_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="SaveCoursesForm.cs">
+    <Compile Include="windows_forms\SaveCoursesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SaveCoursesForm.Designer.cs">
+    <Compile Include="windows_forms\SaveCoursesForm.Designer.cs">
       <DependentUpon>SaveCoursesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Save_Data_Form.cs">
+    <Compile Include="windows_forms\Save_Data_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Save_Data_Form.Designer.cs">
+    <Compile Include="windows_forms\Save_Data_Form.Designer.cs">
       <DependentUpon>Save_Data_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Statistics_form.cs">
+    <Compile Include="windows_forms\Statistics_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Statistics_form.Designer.cs">
+    <Compile Include="windows_forms\Statistics_form.Designer.cs">
       <DependentUpon>Statistics_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="StudentClass.cs" />
-    <Compile Include="StudentsListForm.cs">
+    <Compile Include="classes\StudentClass.cs" />
+    <Compile Include="windows_forms\StudentsListForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudentsListForm.Designer.cs">
+    <Compile Include="windows_forms\StudentsListForm.Designer.cs">
       <DependentUpon>StudentsListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Student_Database.cs" />
-    <Compile Include="Login_Form.cs">
+    <Compile Include="database\Student_Database.cs" />
+    <Compile Include="windows_forms\Login_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login_Form.Designer.cs">
+    <Compile Include="windows_forms\Login_Form.Designer.cs">
       <DependentUpon>Login_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Update_Student_Form.cs">
+    <Compile Include="windows_forms\Update_Student_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Update_Student_Form.Designer.cs">
+    <Compile Include="windows_forms\Update_Student_Form.Designer.cs">
       <DependentUpon>Update_Student_Form.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Add_Student_Form.resx">
+    <EmbeddedResource Include="windows_forms\Add_Student_Form.resx">
       <DependentUpon>Add_Student_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login_Form.resx">
+    <EmbeddedResource Include="windows_forms\Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main_Form.resx">
+    <EmbeddedResource Include="windows_forms\Main_Form.resx">
       <DependentUpon>Main_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manager_Form.resx">
+    <EmbeddedResource Include="windows_forms\Manager_Form.resx">
       <DependentUpon>Manager_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Add_Course_From.resx">
+    <EmbeddedResource Include="windows_forms\Add_Course_From.resx">
       <DependentUpon>Add_Course_From.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manage_Courses_Form.resx">
+    <EmbeddedResource Include="windows_forms\Manage_Courses_Form.resx">
       <DependentUpon>Manage_Courses_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -200,20 +200,21 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SaveCoursesForm.resx">
+    <EmbeddedResource Include="windows_forms\SaveCoursesForm.resx">
       <DependentUpon>SaveCoursesForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Save_Data_Form.resx">
+    <EmbeddedResource Include="windows_forms\Save_Data_Form.resx">
       <DependentUpon>Save_Data_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Statistics_form.resx">
+    <EmbeddedResource Include="windows_forms\Statistics_form.resx">
       <DependentUpon>Statistics_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StudentsListForm.resx">
+    <EmbeddedResource Include="windows_forms\StudentsListForm.resx">
       <DependentUpon>StudentsListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Update_Student_Form.resx">
+    <EmbeddedResource Include="windows_forms\Update_Student_Form.resx">
       <DependentUpon>Update_Student_Form.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -230,9 +231,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="windows_forms\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="images\png-clipart-computer-icons-user-login-icon-miscellaneous-monochrome.png" />
     <Content Include="images\studentswallpaper.jpg">

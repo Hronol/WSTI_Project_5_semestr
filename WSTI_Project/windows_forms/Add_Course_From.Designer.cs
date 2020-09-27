@@ -137,7 +137,7 @@
             this.Controls.Add(this.label6);
             this.Name = "Add_Course_From";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Manage_Course_Form";
+            this.Text = "School_manager";
             this.Load += new System.EventHandler(this.Add_Course_From_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownhoursNumber)).EndInit();
             this.ResumeLayout(false);

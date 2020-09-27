@@ -205,7 +205,7 @@
             this.Controls.Add(this.buttonRemoveCourse);
             this.Name = "Manage_Courses_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Manage_Courses_Form";
+            this.Text = "School_manager";
             this.Load += new System.EventHandler(this.Manage_Courses_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownhoursNumber)).EndInit();
             this.ResumeLayout(false);

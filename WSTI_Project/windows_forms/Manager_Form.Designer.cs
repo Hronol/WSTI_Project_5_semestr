@@ -367,7 +367,7 @@
             this.Controls.Add(this.label4);
             this.Name = "Manager_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Manager_Form";
+            this.Text = "School_manager";
             this.Load += new System.EventHandler(this.Manager_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStudent)).EndInit();
             this.groupBox1.ResumeLayout(false);

@@ -314,7 +314,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Update_Student_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Update_Student_Form";
+            this.Text = "School_manager";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStudent)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

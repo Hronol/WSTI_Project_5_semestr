@@ -33,7 +33,6 @@
             this.sTUDENCIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajStudentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaStudentówToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statystykiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.edytujUsuńToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ustawieniaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zapiszToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,7 +60,6 @@
             this.sTUDENCIToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dodajStudentaToolStripMenuItem,
             this.listaStudentówToolStripMenuItem,
-            this.statystykiToolStripMenuItem,
             this.edytujUsuńToolStripMenuItem,
             this.ustawieniaToolStripMenuItem,
             this.zapiszToolStripMenuItem});
@@ -82,13 +80,6 @@
             this.listaStudentówToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.listaStudentówToolStripMenuItem.Text = "Lista studentów";
             this.listaStudentówToolStripMenuItem.Click += new System.EventHandler(this.listaStudentówToolStripMenuItem_Click);
-            // 
-            // statystykiToolStripMenuItem
-            // 
-            this.statystykiToolStripMenuItem.Name = "statystykiToolStripMenuItem";
-            this.statystykiToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
-            this.statystykiToolStripMenuItem.Text = "Statystyki";
-            this.statystykiToolStripMenuItem.Click += new System.EventHandler(this.statystykiToolStripMenuItem_Click);
             // 
             // edytujUsuńToolStripMenuItem
             // 
@@ -156,7 +147,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Main_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Main_Form";
+            this.Text = "School Manager";
             this.Load += new System.EventHandler(this.Main_Form_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -171,7 +162,6 @@
         private System.Windows.Forms.ToolStripMenuItem sTUDENCIToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dodajStudentaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listaStudentówToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem statystykiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem edytujUsuńToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kURSYToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem zapiszToolStripMenuItem;

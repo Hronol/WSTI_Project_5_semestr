@@ -15,7 +15,8 @@ namespace WSTI_Project
 
         public bool addStudent(string name, string lastName, DateTime birthday, string phone, string gender, string address, MemoryStream picture)
         {
-            MySqlCommand command = new MySqlCommand("INSERT INTO `students`(`first_name`, `last_name`, `birthday`, `gender`, `phone`, `address`, `picture`) VALUES (@n,@ln,@bdt,@gdr,@phn,@adrs,@pic)", db.getConnection);
+            MySqlCommand command = new MySqlCommand("INSERT INTO `students`(`first_name`, `last_name`, `birthday`, `gender`, `phone`, `address`, `picture`) " +
+                "VALUES (@n,@ln,@bdt,@gdr,@phn,@adrs,@pic)", db.getConnection);
             //@n,@ln,@bdt,@gdr,@phn,@adrs,@pic
             command.Parameters.Add("@n", MySqlDbType.VarChar).Value = name;
             command.Parameters.Add("@ln", MySqlDbType.VarChar).Value = lastName;
@@ -53,7 +54,7 @@ namespace WSTI_Project
 
         public bool updateStudent(int studentID, string name, string lastName, DateTime birthday, string phone, string gender, string address, MemoryStream picture)
         {
-            MySqlCommand command = new MySqlCommand("UPDATE `students` SET `first_name`=@n,`last_name`=@ln,`birthday`=@bdt,`gender`=@gdr,`phone`=@adrs,`address`=@adrs,`picture`=@pic WHERE `id`=@ID", db.getConnection);
+            MySqlCommand command = new MySqlCommand("UPDATE `students` SET `first_name`=@n,`last_name`=@ln,`birthday`=@bdt,`gender`=@gdr,`phone`=@adrs,`address`=@adrs,`picture`=@pic WHERE `id_student`=@ID", db.getConnection);
             //@n,@ln,@bdt,@gdr,@phn,@adrs,@pic
             command.Parameters.Add("@ID", MySqlDbType.Int32).Value = studentID;
             command.Parameters.Add("@n", MySqlDbType.VarChar).Value = name;
@@ -79,7 +80,7 @@ namespace WSTI_Project
 
         public bool deleteStudent(int studentID)
         {
-            MySqlCommand command = new MySqlCommand("DELETE FROM `students` WHERE `id`=@ID", db.getConnection);
+            MySqlCommand command = new MySqlCommand("DELETE FROM `students` WHERE `id_student`=@ID", db.getConnection);
             //@ID
             command.Parameters.Add("@ID", MySqlDbType.Int32).Value = studentID;
 

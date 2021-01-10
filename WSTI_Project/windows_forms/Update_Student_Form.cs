@@ -44,6 +44,7 @@ namespace WSTI_Project
             try
             {
                 int id = Convert.ToInt32(textBoxID.Text);
+                int student_courseID = Convert.ToInt32(textBoxStudentCourseID.Text);
                 string name = textBoxName.Text;
                 string lastName = textBoxLastName.Text;
                 DateTime birthday = dateTimePickerNewStudent.Value;
@@ -62,7 +63,7 @@ namespace WSTI_Project
                 {
                     pictureBoxStudent.Image.Save(picture, pictureBoxStudent.Image.RawFormat);
 
-                    if (studentClass.updateStudent(id, name, lastName, birthday, phone, gender, address, picture))
+                    if (studentClass.updateStudent(student_courseID, id, name, lastName, birthday, phone, gender, address, picture))
                     {
                         MessageBox.Show("Zaktualizowano dane studenta", "Aktualizacja danych", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }

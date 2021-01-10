@@ -47,6 +47,8 @@
             this.buttonAddPhoto = new System.Windows.Forms.Button();
             this.buttonSaveStudent = new System.Windows.Forms.Button();
             this.buttonCancelStudent = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBoxStudentCourseID = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStudent)).BeginInit();
             this.SuspendLayout();
@@ -153,6 +155,7 @@
             this.dateTimePickerNewStudent.Name = "dateTimePickerNewStudent";
             this.dateTimePickerNewStudent.Size = new System.Drawing.Size(307, 26);
             this.dateTimePickerNewStudent.TabIndex = 11;
+            this.dateTimePickerNewStudent.Value = new System.DateTime(2020, 12, 25, 23, 59, 59, 0);
             // 
             // groupBox1
             // 
@@ -195,6 +198,7 @@
             this.label7.Size = new System.Drawing.Size(110, 31);
             this.label7.TabIndex = 13;
             this.label7.Text = "Zdjęcie:";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // pictureBoxStudent
             // 
@@ -239,11 +243,31 @@
             this.buttonCancelStudent.Click += new System.EventHandler(this.buttonCancelStudent_Click);
             this.buttonCancelStudent.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buttonCancelStudent_MouseClick);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label8.Location = new System.Drawing.Point(35, 492);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(78, 31);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Kurs:";
+            // 
+            // textBoxStudentCourseID
+            // 
+            this.textBoxStudentCourseID.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBoxStudentCourseID.Location = new System.Drawing.Point(119, 489);
+            this.textBoxStudentCourseID.Name = "textBoxStudentCourseID";
+            this.textBoxStudentCourseID.Size = new System.Drawing.Size(44, 38);
+            this.textBoxStudentCourseID.TabIndex = 19;
+            // 
             // Add_Student_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(625, 620);
+            this.Controls.Add(this.textBoxStudentCourseID);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.buttonCancelStudent);
             this.Controls.Add(this.buttonSaveStudent);
             this.Controls.Add(this.buttonAddPhoto);
@@ -293,5 +317,7 @@
         private System.Windows.Forms.Button buttonAddPhoto;
         private System.Windows.Forms.Button buttonSaveStudent;
         private System.Windows.Forms.Button buttonCancelStudent;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBoxStudentCourseID;
     }
 }

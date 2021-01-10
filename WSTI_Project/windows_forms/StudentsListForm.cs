@@ -30,7 +30,7 @@ namespace WSTI_Project
             DataGridViewImageColumn gridViewImageColumn = new DataGridViewImageColumn();
             dataGridView1.RowTemplate.Height = 80;
             dataGridView1.DataSource = studentClass.getStudents(command);
-            gridViewImageColumn = (DataGridViewImageColumn)dataGridView1.Columns[7];
+            gridViewImageColumn = (DataGridViewImageColumn)dataGridView1.Columns[8];
             gridViewImageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
             dataGridView1.AllowUserToAddRows = false;
         }
@@ -65,7 +65,7 @@ namespace WSTI_Project
             DataGridViewImageColumn gridViewImageColumn = new DataGridViewImageColumn();
             dataGridView1.RowTemplate.Height = 80;
             dataGridView1.DataSource = studentClass.getStudents(command);
-            gridViewImageColumn = (DataGridViewImageColumn)dataGridView1.Columns[7];
+            gridViewImageColumn = (DataGridViewImageColumn)dataGridView1.Columns[8];
             gridViewImageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
             dataGridView1.AllowUserToAddRows = false;
         }

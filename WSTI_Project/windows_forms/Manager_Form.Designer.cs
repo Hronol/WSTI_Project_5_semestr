@@ -56,6 +56,8 @@
             this.buttonSearch = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.textBoxID = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBoxStudentCourseID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStudent)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -70,6 +72,7 @@
             this.dateTimePickerNewStudent.Name = "dateTimePickerNewStudent";
             this.dateTimePickerNewStudent.Size = new System.Drawing.Size(292, 26);
             this.dateTimePickerNewStudent.TabIndex = 25;
+            this.dateTimePickerNewStudent.Value = new System.DateTime(2020, 12, 25, 23, 59, 59, 0);
             // 
             // textBoxLastName
             // 
@@ -333,12 +336,32 @@
             this.textBoxID.Size = new System.Drawing.Size(292, 38);
             this.textBoxID.TabIndex = 40;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label10.Location = new System.Drawing.Point(12, 430);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(78, 31);
+            this.label10.TabIndex = 41;
+            this.label10.Text = "Kurs:";
+            // 
+            // textBoxStudentCourseID
+            // 
+            this.textBoxStudentCourseID.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBoxStudentCourseID.Location = new System.Drawing.Point(96, 427);
+            this.textBoxStudentCourseID.Name = "textBoxStudentCourseID";
+            this.textBoxStudentCourseID.Size = new System.Drawing.Size(49, 38);
+            this.textBoxStudentCourseID.TabIndex = 42;
+            // 
             // Manager_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1075, 761);
+            this.Controls.Add(this.textBoxStudentCourseID);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.buttonSearch);
@@ -408,5 +431,7 @@
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBoxID;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBoxStudentCourseID;
     }
 }

@@ -35,6 +35,7 @@ namespace WSTI_Project
             try
             {
                 StudentClass studentClass = new StudentClass();
+                int student_courseID = Convert.ToInt32(textBoxStudentCourseID.Text);
                 string name = textBoxName.Text;
                 string lastName = textBoxLastName.Text;
                 DateTime birthday = dateTimePickerNewStudent.Value;
@@ -53,7 +54,7 @@ namespace WSTI_Project
                 {
                     pictureBoxStudent.Image.Save(picture, pictureBoxStudent.Image.RawFormat);
 
-                    if (studentClass.addStudent(name, lastName, birthday, gender, phone, address, picture))
+                    if (studentClass.addStudent(student_courseID, name, lastName, birthday, gender, phone, address, picture))
                     {
                         MessageBox.Show("Dodano studenta!", "Gratulacje!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -98,6 +99,11 @@ namespace WSTI_Project
         private void buttonCancelStudent_MouseClick(object sender, MouseEventArgs e)
         {
             
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -13,12 +13,13 @@ namespace WSTI_Project
     {
         Student_Database db = new Student_Database();
 
-        public bool addStudent(string name, string lastName, DateTime birthday, string phone, string gender, string address, MemoryStream picture)
+        public bool addStudent(int courseid, string name, string lastName, DateTime birthday, string phone, string gender, string address, MemoryStream picture)
         {
-            MySqlCommand command = new MySqlCommand("INSERT INTO `students`(`first_name`, `last_name`, `birthday`, `gender`, `phone`, `address`, `picture`) " +
-                "VALUES (@n,@ln,@bdt,@gdr,@phn,@adrs,@pic)", db.getConnection);
-            //@n,@ln,@bdt,@gdr,@phn,@adrs,@pic
+            MySqlCommand command = new MySqlCommand("INSERT INTO `students`(`course_id`, `first_name`, `last_name`, `birthday`, `gender`, `phone`, `address`, `picture`) " +
+                "VALUES (@cid, @n,@ln,@bdt,@gdr,@phn,@adrs,@pic)", db.getConnection);
+            //@cid,@n,@ln,@bdt,@gdr,@phn,@adrs,@pic
             command.Parameters.Add("@n", MySqlDbType.VarChar).Value = name;
+            command.Parameters.Add("@cid", MySqlDbType.Int32).Value = courseid;
             command.Parameters.Add("@ln", MySqlDbType.VarChar).Value = lastName;
             command.Parameters.Add("@bdt", MySqlDbType.Date).Value = birthday;
             command.Parameters.Add("@gdr", MySqlDbType.VarChar).Value = phone;
@@ -52,10 +53,11 @@ namespace WSTI_Project
 
         }
 
-        public bool updateStudent(int studentID, string name, string lastName, DateTime birthday, string phone, string gender, string address, MemoryStream picture)
+        public bool updateStudent(int courseid, int studentID, string name, string lastName, DateTime birthday, string phone, string gender, string address, MemoryStream picture)
         {
-            MySqlCommand command = new MySqlCommand("UPDATE `students` SET `first_name`=@n,`last_name`=@ln,`birthday`=@bdt,`gender`=@gdr,`phone`=@adrs,`address`=@adrs,`picture`=@pic WHERE `id_student`=@ID", db.getConnection);
+            MySqlCommand command = new MySqlCommand("UPDATE `students` SET `course_id`=@cid,`first_name`=@n,`last_name`=@ln,`birthday`=@bdt,`gender`=@gdr,`phone`=@adrs,`address`=@adrs,`picture`=@pic WHERE `id_student`=@ID", db.getConnection);
             //@n,@ln,@bdt,@gdr,@phn,@adrs,@pic
+            command.Parameters.Add("@cid", MySqlDbType.Int32).Value = courseid;
             command.Parameters.Add("@ID", MySqlDbType.Int32).Value = studentID;
             command.Parameters.Add("@n", MySqlDbType.VarChar).Value = name;
             command.Parameters.Add("@ln", MySqlDbType.VarChar).Value = lastName;

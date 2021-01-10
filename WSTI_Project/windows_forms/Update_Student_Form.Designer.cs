@@ -51,6 +51,8 @@
             this.buttonDeleteStudent = new System.Windows.Forms.Button();
             this.buttonFindStudent = new System.Windows.Forms.Button();
             this.buttonCloseFormAddStudents = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBoxStudentCourseID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStudent)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -64,6 +66,7 @@
             this.dateTimePickerNewStudent.Name = "dateTimePickerNewStudent";
             this.dateTimePickerNewStudent.Size = new System.Drawing.Size(307, 26);
             this.dateTimePickerNewStudent.TabIndex = 17;
+            this.dateTimePickerNewStudent.Value = new System.DateTime(2020, 12, 25, 23, 59, 59, 0);
             // 
             // textBoxLastName
             // 
@@ -285,12 +288,32 @@
             this.buttonCloseFormAddStudents.UseVisualStyleBackColor = false;
             this.buttonCloseFormAddStudents.Click += new System.EventHandler(this.buttonCloseFormAddStudents_Click);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label9.Location = new System.Drawing.Point(33, 482);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(78, 31);
+            this.label9.TabIndex = 45;
+            this.label9.Text = "Kurs:";
+            // 
+            // textBoxStudentCourseID
+            // 
+            this.textBoxStudentCourseID.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBoxStudentCourseID.Location = new System.Drawing.Point(117, 479);
+            this.textBoxStudentCourseID.Name = "textBoxStudentCourseID";
+            this.textBoxStudentCourseID.Size = new System.Drawing.Size(48, 38);
+            this.textBoxStudentCourseID.TabIndex = 46;
+            // 
             // Update_Student_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(984, 667);
+            this.Controls.Add(this.textBoxStudentCourseID);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.buttonCloseFormAddStudents);
             this.Controls.Add(this.buttonFindStudent);
             this.Controls.Add(this.buttonEditStudent);
@@ -347,5 +370,7 @@
         internal System.Windows.Forms.RadioButton radioButtonMale;
         internal System.Windows.Forms.RadioButton radioButtonFemale;
         private System.Windows.Forms.Button buttonCloseFormAddStudents;
+        private System.Windows.Forms.Label label9;
+        internal System.Windows.Forms.TextBox textBoxStudentCourseID;
     }
 }

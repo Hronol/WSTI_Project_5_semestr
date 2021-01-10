@@ -37,7 +37,7 @@ namespace WSTI_Project
 
         public bool courseNameVerifi(string courseName, int courseID = 0)
         {
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `studies` WHERE `label` = @name AND id <> @id", db.getConnection);
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `studies` WHERE `label` = @name AND id_course <> @id", db.getConnection);
 
             command.Parameters.Add("@name", MySqlDbType.VarChar).Value = courseName;
             command.Parameters.Add("@id", MySqlDbType.Int32).Value = courseID;
@@ -63,7 +63,7 @@ namespace WSTI_Project
 
         public bool removeCourse(int courseID)
         {
-            MySqlCommand command = new MySqlCommand("DELETE FROM `studies` WHERE `id` = @id", db.getConnection);
+            MySqlCommand command = new MySqlCommand("DELETE FROM `studies` WHERE `id_course` = @id", db.getConnection);
 
             command.Parameters.Add("@id", MySqlDbType.Int32).Value = courseID;
 
@@ -97,7 +97,7 @@ namespace WSTI_Project
 
         public DataTable getCoursesByID(int courseID)
         {
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `studies` WHERE id =@id", db.getConnection);
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `studies` WHERE id_course =@id", db.getConnection);
 
             command.Parameters.Add("@id", MySqlDbType.Int32).Value = courseID;
 
@@ -112,7 +112,7 @@ namespace WSTI_Project
 
         public bool editCourse(int courseID, string courseName, int hoursNumber, string description)
         {
-            MySqlCommand command = new MySqlCommand("UPDATE `studies` SET `label`=@name,`hours`=@hoursnumber,`description`=@description WHERE `id` = @id", db.getConnection);
+            MySqlCommand command = new MySqlCommand("UPDATE `studies` SET `label`=@name,`hours`=@hoursnumber,`description`=@description WHERE `id_course` = @id", db.getConnection);
 
             command.Parameters.Add("@id", MySqlDbType.Int32).Value = courseID;
             command.Parameters.Add("@name", MySqlDbType.VarChar).Value = courseName;

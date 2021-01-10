@@ -94,7 +94,7 @@ namespace WSTI_Project
         public void listboxShowCourses()
         {
             listBoxCourses.DataSource = courseClass.getAllcourses();
-            listBoxCourses.ValueMember = "id";
+            listBoxCourses.ValueMember = "id_course";
             listBoxCourses.DisplayMember = "label";
 
             listBoxCourses.SelectedItem = null;
@@ -103,7 +103,7 @@ namespace WSTI_Project
         public void populateComboBox()
         {
             comboBoxSelectCourse.DataSource = courseClass.getAllcourses();
-            comboBoxSelectCourse.ValueMember = "id";
+            comboBoxSelectCourse.ValueMember = "id_course";
             comboBoxSelectCourse.DisplayMember = "label";
 
             comboBoxSelectCourse.SelectedItem = null;

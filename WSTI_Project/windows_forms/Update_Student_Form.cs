@@ -135,7 +135,8 @@ namespace WSTI_Project
             try
             {
                 int id = Convert.ToInt32(textBoxID.Text);
-                MySqlCommand command = new MySqlCommand("SELECT `id`, `first_name`, `last_name`, `birthday`, `gender`, `phone`, `address`, `picture` FROM `students` WHERE `id` =" + id, db.getConnection);
+                MySqlCommand command = new MySqlCommand("SELECT `id_student`, `first_name`, `last_name`, `birthday`, `gender`, `phone`, `address`, `picture` " +
+                    "FROM `students` WHERE `id_student` =" + id, db.getConnection);
 
                 DataTable dataTable = studentClass.getStudents(command);
 
